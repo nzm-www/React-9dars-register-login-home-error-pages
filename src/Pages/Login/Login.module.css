@@ -1,0 +1,65 @@
+.form {
+  width: 300px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 50px auto;
+  gap: 30px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  flex-direction: column;
+}
+
+.form * {
+  width: 100%;
+  padding: 10px;
+  border-style: solid;
+}
+.title {
+  text-align: center;
+}
+/* ;;;;;;;;;;; */
+.loader {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
